@@ -1,7 +1,7 @@
 # Data Engineering Assessment
 
-**Estimated time:** 2–2.5 hours  
-**Submission:** Push your completed work to the provided GitHub repo (or zip and email)
+**Estimated time:** 5-8 hours  
+**Submission:** You can clone the github repo in your private account and share the link back
 
 ---
 
@@ -133,7 +133,6 @@ Describe (in code or pseudocode) how you would schedule and run this pipeline au
 Requirements:
 - Runs daily at 06:00 UTC
 - Steps run in order: load raw data → transform → run quality checks → notify on success
-- If the quality checks fail, the success notification must **not** run
 - At least one retry on transient failure
 - Owner / contact is identifiable
 
