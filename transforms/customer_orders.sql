@@ -1,0 +1,22 @@
+-- Task 2b — Customer summary (customer_orders)
+--
+-- Source: int_orders_enriched (from Task 2a)
+--
+-- Produce one row per customer with the following columns:
+--
+--   customer_id       — the customer identifier
+--   full_name         — customer's full name
+--   tier              — customer tier (gold / silver / bronze)
+--   total_orders      — count of ALL orders for this customer
+--   completed_orders  — count of orders where is_completed = TRUE
+--   total_revenue     — sum of order_amount for completed orders only
+--   avg_order_value   — average order_amount for completed orders, rounded to 2 decimal places
+--   first_order_date  — earliest order_date for this customer
+--   last_order_date   — most recent order_date for this customer
+--
+-- Only include customers who have at least one completed order.
+--
+-- If you are using a framework (dbt, SQLMesh, etc.) feel free to use its conventions.
+-- You may rename or restructure this file to suit your chosen tool.
+
+-- YOUR IMPLEMENTATION BELOW:

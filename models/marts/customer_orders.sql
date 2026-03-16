@@ -1,0 +1,15 @@
+-- Task 2b — customer_orders  (dbt scaffold — see transforms/customer_orders.sql for the tool-agnostic version)
+--
+-- If you are using dbt, implement your logic here.
+-- If you are using a different tool, use transforms/customer_orders.sql instead.
+--
+-- Produce one row per customer with:
+--   customer_id, full_name, tier,
+--   total_orders        (count of all orders)
+--   completed_orders    (count where is_completed = TRUE)
+--   total_revenue       (sum of order_amount for completed orders only)
+--   avg_order_value     (average order_amount for completed orders, rounded to 2 dp)
+--   first_order_date    (earliest order_date)
+--   last_order_date     (most recent order_date)
+--
+-- Only include customers who have at least one completed order.

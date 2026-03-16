@@ -1,0 +1,15 @@
+-- Task 1b — Clean customers (stg_customers)
+--
+-- Source: data/raw_customers.csv
+--   Columns: customer_id, first_name, last_name, email, signup_date, tier
+--
+-- Requirements:
+--   1. Combine first_name and last_name into a single full_name column (space-separated)
+--   2. Keep all other columns as-is (customer_id, email, signup_date, tier)
+--   3. Add a loaded_at column recording the current timestamp
+--
+-- If you are using a framework (dbt, SQLMesh, etc.) feel free to use its conventions.
+-- If you are writing plain SQL, write a CREATE VIEW or CTE — whatever is clearest.
+-- You may rename or restructure this file to suit your chosen tool.
+
+-- YOUR IMPLEMENTATION BELOW:

@@ -1,0 +1,18 @@
+-- Task 1a — Clean orders (stg_orders)
+--
+-- Source: data/raw_orders.csv
+--   Columns: order_id, customer_id, order_date, status, amount_usd, country_code
+--
+-- Requirements:
+--   1. Rename amount_usd → order_amount
+--   2. Normalise status to lowercase
+--   3. Cast order_date to a date type
+--   4. Exclude rows where order_amount IS NULL
+--   5. Exclude rows where order_amount = 0
+--   6. Add a loaded_at column recording the current timestamp
+--
+-- If you are using a framework (dbt, SQLMesh, etc.) feel free to use its conventions.
+-- If you are writing plain SQL, write a CREATE VIEW or CTE — whatever is clearest.
+-- You may rename or restructure this file to suit your chosen tool.
+
+-- YOUR IMPLEMENTATION BELOW:

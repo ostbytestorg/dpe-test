@@ -1,0 +1,32 @@
+-- Task 3 — Data quality checks
+--
+-- Write checks that validate the following assertions against your transformed data.
+-- Use whatever approach suits your tool: SQL queries that should return 0 rows,
+-- Python assertions, pytest tests, dbt/SQLMesh schema tests, etc.
+--
+-- The key requirement: a real violation must produce a clear, visible failure.
+--
+-- ─── Assertions to implement ─────────────────────────────────────────────────
+--
+--  1. stg_orders.order_id        is unique and never null
+--  2. stg_orders.customer_id     is never null
+--  3. stg_orders.status          is always one of:
+--                                    completed, pending, cancelled, refunded
+--  4. stg_orders.order_amount    is never null
+--  5. customer_orders.customer_id  is unique and never null
+--  6. customer_orders.total_revenue  is never null
+--  7. customer_orders.total_revenue  is never 0 or less
+--
+-- ─── Convention for SQL-based checks ─────────────────────────────────────────
+--
+-- Write each check as a query that RETURNS THE OFFENDING ROWS when a violation
+-- exists, and returns 0 rows when everything is clean.
+-- (This is the same convention used by dbt singular tests, pytest-dbt, etc.)
+--
+-- Example pattern:
+--   SELECT order_id FROM stg_orders WHERE order_id IS NULL;
+--   -- If this returns any rows, the assertion has failed.
+--
+-- ─────────────────────────────────────────────────────────────────────────────
+
+-- YOUR CHECKS BELOW:

@@ -1,0 +1,10 @@
+-- Task 2a — int_orders_enriched  (dbt scaffold — see transforms/int_orders_enriched.sql for the tool-agnostic version)
+--
+-- If you are using dbt, implement your logic here.
+-- If you are using a different tool, use transforms/int_orders_enriched.sql instead.
+--
+-- Requirements:
+--   1. Join stg_orders to stg_customers on customer_id
+--   2. Keep: order_id, customer_id, full_name, tier, order_date, status, order_amount, country_code
+--   3. Add a boolean column is_completed that is TRUE when status = 'completed'
+--   4. Only include rows where status is 'completed' or 'pending'

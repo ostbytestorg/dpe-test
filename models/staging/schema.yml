@@ -1,0 +1,40 @@
+# Data dictionary — stg_orders and customer_orders
+#
+# This file describes the expected shape of the transformed datasets.
+# It is provided as a reference for implementing your data quality checks (Task 3).
+#
+# If you are using dbt, this is also where you would add generic tests
+# (not_null, unique, accepted_values, etc.).
+# If you are using a different tool, use this as a specification only.
+
+# ─── stg_orders ──────────────────────────────────────────────────────────────
+#
+# Description: Cleaned and normalised orders from raw_orders.csv
+#
+# Column            Type        Notes
+# ─────────────────────────────────────────────────────────────────────────────
+# order_id          string      Unique identifier for each order. Must be unique and not null.
+# customer_id       string      Foreign key to stg_customers. Must not be null.
+# order_date        date        Date the order was placed.
+# status            string      Order status. Must be one of:
+#                                   completed | pending | cancelled | refunded
+# order_amount      decimal     Order value in USD. Must not be null. Must be > 0.
+# country_code      string      ISO 2-letter country code.
+# loaded_at         timestamp   When this row was processed.
+
+# ─── customer_orders ─────────────────────────────────────────────────────────
+#
+# Description: One row per customer summarising their order history.
+#              Only customers with at least one completed order appear here.
+#
+# Column              Type        Notes
+# ─────────────────────────────────────────────────────────────────────────────
+# customer_id         string      Unique customer identifier. Must be unique and not null.
+# full_name           string      Customer's full name.
+# tier                string      Customer tier: gold | silver | bronze
+# total_orders        integer     Count of all orders (completed + pending) for this customer.
+# completed_orders    integer     Count of orders where status = completed.
+# total_revenue       decimal     Sum of order_amount for completed orders. Must not be null.
+# avg_order_value     decimal     Average order_amount for completed orders, rounded to 2 dp.
+# first_order_date    date        Earliest order_date for this customer.
+# last_order_date     date        Most recent order_date for this customer.

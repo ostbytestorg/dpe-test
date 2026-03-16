@@ -1,0 +1,17 @@
+-- Task 2a — Enriched orders (int_orders_enriched)
+--
+-- Sources: stg_orders, stg_customers (from Task 1)
+--
+-- Requirements:
+--   1. Join stg_orders to stg_customers on customer_id
+--   2. Keep the following columns:
+--        order_id, customer_id, full_name, tier,
+--        order_date, status, order_amount, country_code
+--   3. Add a boolean column is_completed that is TRUE when status = 'completed'
+--   4. Only include rows where status is 'completed' OR 'pending'
+--      (i.e. exclude cancelled and refunded orders)
+--
+-- If you are using a framework (dbt, SQLMesh, etc.) feel free to use its conventions.
+-- You may rename or restructure this file to suit your chosen tool.
+
+-- YOUR IMPLEMENTATION BELOW:

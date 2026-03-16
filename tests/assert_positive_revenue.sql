@@ -1,0 +1,10 @@
+-- Task 3 — Custom check: assert positive revenue  (dbt scaffold)
+--
+-- If you are using dbt, implement your singular test here.
+-- If you are using a different tool, implement this check in quality/checks.sql or
+-- alongside your other quality checks.
+--
+-- Assertion: no customer in customer_orders has a total_revenue of 0 or less.
+--
+-- Write a query that returns the offending rows when the assertion is violated,
+-- and returns 0 rows when everything is clean.

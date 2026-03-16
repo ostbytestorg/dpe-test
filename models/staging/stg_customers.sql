@@ -1,0 +1,10 @@
+-- Task 1b — stg_customers  (dbt scaffold — see transforms/stg_customers.sql for the tool-agnostic version)
+--
+-- If you are using dbt, implement your logic here.
+-- If you are using a different tool, use transforms/stg_customers.sql instead.
+--
+-- Requirements:
+--   1. Source: raw_customers  (data/raw_customers.csv)
+--   2. Combine first_name and last_name into a single full_name column (space-separated)
+--   3. Keep all other columns as-is
+--   4. Add a loaded_at column (current timestamp)

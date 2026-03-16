@@ -1,0 +1,13 @@
+-- Task 1a — stg_orders  (dbt scaffold — see transforms/stg_orders.sql for the tool-agnostic version)
+--
+-- If you are using dbt, implement your logic here.
+-- If you are using a different tool, use transforms/stg_orders.sql instead.
+--
+-- Requirements:
+--   1. Source: raw_orders  (data/raw_orders.csv)
+--   2. Rename amount_usd → order_amount
+--   3. Normalise status to lowercase
+--   4. Cast order_date to DATE
+--   5. Exclude rows where order_amount IS NULL
+--   6. Exclude rows where order_amount = 0
+--   7. Add a loaded_at column (current timestamp)
