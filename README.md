@@ -1,4 +1,4 @@
-# Data Engineering Assessment
+# Data Platform Engineer Assessment
 
 **Estimated time:** 5-8 hours  
 **Submission:** You can clone the github repo in your private account and share the link back
